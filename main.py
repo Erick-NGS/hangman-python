@@ -1,62 +1,6 @@
 import random
 from hangman_words import word_list
-
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+from hangman_art import stages, logo
 
 #STEP 1 (DONE)
 #TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
@@ -98,7 +42,7 @@ stages = ['''
 
 
 
-#STEP 5
+#STEP 5 ()
 #TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
 #Delete this line: word_list = ["ardvark", "baboon", "camel"]
 
@@ -119,14 +63,16 @@ end_of_game = False
 player_lives = 6
 
 #Testing code
-print(f'Pssst, the solution is {chosen_word}.')
+# print(f'Pssst, the solution is {chosen_word}.')
 
 for character in range(guess_length):
     display += "_"
 # print(display)
 
+print(logo)
+
 while not end_of_game:
-    letter_guess = input("Guess a letter: ").lower()
+    letter_guess = input("\nGuess a letter: ").lower()
 
     for pos in range(guess_length):
         letter = chosen_word[pos]
@@ -145,5 +91,6 @@ while not end_of_game:
     if "_" not in display:
         end_of_game = True
         print("\nVictory!\n")
+        print(f"LIVES LEFT = {player_lives}")
     
     print(stages[player_lives])
