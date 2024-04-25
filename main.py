@@ -21,6 +21,9 @@ import random
 #TODO-3: - Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_". DONE
 #Hint - Don't worry about getting the user to guess the next letter. We'll tackle that in step 3.
 
+#STEP 3
+#TODO-1: - Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_"). Then you can tell the user they've won.
+
 
 
 word_list = ["aardvark", "baboon", "camel"]
