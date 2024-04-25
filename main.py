@@ -1,4 +1,5 @@
 import random
+from hangman_words import word_list
 
 stages = ['''
   +---+
@@ -111,7 +112,6 @@ stages = ['''
 
 
 
-word_list = ["aardvark", "baboon", "camel"]
 display = []
 chosen_word = random.choice(word_list)
 guess_length = len(chosen_word)
