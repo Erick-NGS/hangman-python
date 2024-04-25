@@ -1,5 +1,62 @@
 import random
 
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
 #STEP 1 (DONE)
 #TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
 
@@ -25,6 +82,18 @@ import random
 
 #STEP 3 (DONE)
 #TODO-1: - Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more blanks ("_"). Then you can tell the user they've won.
+
+
+
+#STEP 4 ()
+#TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. 
+#Set 'lives' to equal 6.
+
+#TODO-2: - If guess is not a letter in the chosen_word,
+#Then reduce 'lives' by 1. 
+#If lives goes down to 0 then the game should stop and it should print "You lose."
+
+#TODO-3: - print the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
 
 
 
