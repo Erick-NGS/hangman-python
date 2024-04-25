@@ -85,7 +85,7 @@ stages = ['''
 
 
 
-#STEP 4 ()
+#STEP 4 (DONE)
 #TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. 
 #Set 'lives' to equal 6.
 
@@ -102,13 +102,14 @@ display = []
 chosen_word = random.choice(word_list)
 guess_length = len(chosen_word)
 end_of_game = False
+player_lives = 6
 
 #Testing code
 print(f'Pssst, the solution is {chosen_word}.')
 
 for character in range(guess_length):
     display += "_"
-print(display)
+# print(display)
 
 while not end_of_game:
     letter_guess = input("Guess a letter: ").lower()
@@ -118,8 +119,17 @@ while not end_of_game:
         if letter_guess == letter:
             display[pos] = letter
 
-    print(display)
+    if letter_guess not in chosen_word:
+        player_lives -= 1
+        if player_lives == 0:
+            end_of_game = True
+            print("\nDefeat!\n")
+
+    #Join all the elements in the list and turn it into a String.
+    print(f"\n{' '.join(display)}\n")
 
     if "_" not in display:
         end_of_game = True
         print("\nVictory!\n")
+    
+    print(stages[player_lives])
